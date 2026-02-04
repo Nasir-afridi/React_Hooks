@@ -19,7 +19,7 @@ const UseState = () => {
     <button onClick={decrement}>Decrement</button>
 
     <h1>You Typed : {text}</h1>
-    <input type="text" onChange={(e) => setText(e.target.value)}/>
+    <input value={text} type="text" onChange={(e) => setText(e.target.value)}/>
     </>
   )
 }
