@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Counter = ({ countIs, myData }) => {
+  useEffect(() => {
+    handleCounter();
+  }, []); // abb ye sirf aik baar chalayga
+
   function handleCounter() {
     console.log("handleCounter called");
   }
-  handleCounter();
+
   return (
     <>
       <h1>Count is : {countIs}</h1>
