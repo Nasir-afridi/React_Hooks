@@ -1,11 +1,13 @@
-import UseState from "./Hooks/01-UseState"
-function App() {
+// import UseState from "./Hooks/01-UseState";
+import UseEffect from "./Hooks/02-UseEffect";
 
+function App() {
   return (
     <>
-    <UseState />
+      {/* <UseState /> */}
+      <UseEffect />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
