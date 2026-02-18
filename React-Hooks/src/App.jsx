@@ -2,6 +2,7 @@
 // import UseEffect from "./Hooks/02-UseEffect";
 import { useState } from "react";
 import Counter from "./Props/Counter.jsx";
+import Data from "./Props/Data.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,9 +12,9 @@ function App() {
       {/* <UseState /> */}
       {/* <UseEffect /> */}
 
-      <Counter countIs={count} myData={data} />
+      {/* <Counter countIs={count} myData={data} />
       <button onClick={() => setCount(count + 1)}>Count</button>
-      <button onClick={() => setData(data + 1)}>Data</button>
+      <button onClick={() => setData(data + 1)}>Data</button> */}
     </>
   );
 }
