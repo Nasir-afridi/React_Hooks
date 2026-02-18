@@ -3,10 +3,18 @@ import React, { useEffect } from "react";
 const Counter = ({ countIs, myData }) => {
   useEffect(() => {
     handleCounter();
-  }, []); // abb ye sirf aik baar chalayga
+  }, [myData]); // abb ye sirf data state ki change pyy chalayga
+
+  useEffect(() => {
+    name();
+  }, [countIs]); // ye sirf count state ki update pp chlayga
 
   function handleCounter() {
     console.log("handleCounter called");
+  }
+
+  function name() {
+    console.log("first");
   }
 
   return (
