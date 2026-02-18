@@ -5,12 +5,20 @@ const UseEffect = () => {
   const [data, setData] = useState(0);
 
   useEffect(() => {
+    counter();
+  }, [count]); // Use effect mein 2 parameters hoty hain.
+
+  useEffect(() => {
     callOnce();
-  }, []); // Use effect mein 2 parameters hoty hain.
+  }, [data]);
 
   function callOnce() {
     console.log("CallOnce");
   } // button ko click krny pp function hamesha call hoga q k component rerender horha hai isiliye function be pher sy call horha hai isko side effect bolty hain or ye useeffect sy handle hoga.
+
+  function counter() {
+    console.log("Counter is : ", count);
+  }
 
   return (
     <>
