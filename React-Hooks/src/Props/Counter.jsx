@@ -7,7 +7,7 @@ const Counter = ({ countIs, myData }) => {
 
   useEffect(() => {
     name();
-  }, [countIs]); // ye sirf count state ki update pp chlayga
+  }, [countIs, myData]); // ye dono state ppp chalayga
 
   function handleCounter() {
     console.log("handleCounter called");
