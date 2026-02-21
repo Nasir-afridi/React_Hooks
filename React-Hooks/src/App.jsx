@@ -1,12 +1,12 @@
 // import UseState from "./Hooks/01-UseState";
 // import UseEffect from "./Hooks/02-UseEffect";
-import { useState } from "react";
+// import { useState } from "react";
 // import Counter from "./Props/Counter.jsx";
-import Data from "./Props/Data.jsx";
+// import Data from "./Props/Data.jsx";
 
 function App() {
-  const [count, setCount] = useState("Nasir");
-  const [data, setData] = useState("No");
+  // const [count, setCount] = useState("Nasir");
+  // const [data, setData] = useState("No");
   return (
     <>
       {/* <UseState /> */}
@@ -16,16 +16,16 @@ function App() {
       <button onClick={() => setCount(count + 1)}>Count</button>
       <button onClick={() => setData(data + 1)}>Data</button> */}
 
-      <Data Name={count} Class={data} />
+      {/* <Data Name={count} Class={data} /> */}
 
-      <button onClick={() => setCount("waqas")}>Name</button>
+      {/* <button onClick={() => setCount("waqas")}>Name</button>
       <button
         onClick={() => {
           setData("DAE");
         }}
       >
         Class
-      </button>
+      </button> */}
     </>
   );
 }
