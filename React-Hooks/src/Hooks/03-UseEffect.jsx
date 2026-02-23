@@ -29,6 +29,10 @@ const UseEffect = () => {
     console.log("Mounting phase");
   }, []); // state change ho component rerender ho ye aik he baar show hoga
 
+  useEffect(() => {
+    console.log("updated phase ");
+  }, [count]);
+
   return (
     <>
       <h1>Count is : {count}</h1>
