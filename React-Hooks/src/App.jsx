@@ -3,7 +3,7 @@
 // import { useState } from "react";
 // import Counter from "./Props/Counter.jsx";
 // import Data from "./Props/Data.jsx";
-import UseEffect from "./Hooks/03-UseEffect";
+// import UseEffect from "./Hooks/03-UseEffect";
 
 function App() {
   // const [count, setCount] = useState("Nasir");
@@ -28,7 +28,7 @@ function App() {
         Class
       </button> */}
 
-      <UseEffect />
+      {/* <UseEffect /> */}
     </>
   );
 }
