@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 /*
     Life Cycle in UseEffect
@@ -23,9 +23,18 @@ import React from "react";
 */
 
 const UseEffect = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("Mounting phase");
+  }, []); // state change ho component rerender ho ye aik he baar show hoga
+
   return (
     <>
-      <h1>03-UseEffect</h1>
+      <h1>Count is : {count}</h1>
+      <button onClick={() => setCount(count + 1)}>increment</button>
+      <button onClick={() => setCount(count - 1)}>decrement</button>
+      <button onClick={() => setCount(0)}>Reset</button>
     </>
   );
 };
