@@ -24,6 +24,7 @@ import React, { useEffect, useState } from "react";
 
 const UseEffect = () => {
   const [count, setCount] = useState(0);
+  const [display, setDisplay] = useState(true);
 
   useEffect(() => {
     console.log("Mounting phase");
@@ -35,10 +36,12 @@ const UseEffect = () => {
 
   return (
     <>
-      <h1>Count is : {count}</h1>
+      {display ? <h1>Count is : {count}</h1> : null}
       <button onClick={() => setCount(count + 1)}>increment</button>
+
       <button onClick={() => setCount(count - 1)}>decrement</button>
       <button onClick={() => setCount(0)}>Reset</button>
+      <button onClick={() => setDisplay(!display)}>toggle</button>
     </>
   );
 };
