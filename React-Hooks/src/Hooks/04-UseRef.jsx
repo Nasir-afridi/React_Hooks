@@ -3,8 +3,16 @@ import React, { useEffect, useState, useRef } from "react";
 const UseRef = () => {
   const [count, setCount] = useState(0);
 
-  // iski value update isliye nahe hoge qq kkk component rerender hota hai to value pher sy 0 sy start hojate hai. yane iski value persit nahe hote. isiliye useRef ka use hota hai
-  let value = 0;
+  /*
+    useRef ek React hook hai jo ek mutable object return karta hai.
+    Is object ke andar sirf ek property hoti hai: `.current`.
+    Jo initial value hum useRef() ko dete hain, wo `.current` mein store ho jati hai.
+    Hum `.current` ki value ko change kar sakte hain.
+    Sabse important baat: `.current` ki value change karne par component re-render nahi hota.
+    Lekin ye value re-renders ke darmiyan persist rehti hai (reset nahi hoti).
+    Is liye useRef un values ke liye use hota hai jo yaad rakhni ho lekin UI update na karni ho.
+   */
+  let value = useRef(0);
 
   function handleIncrement() {
     value += 1;
