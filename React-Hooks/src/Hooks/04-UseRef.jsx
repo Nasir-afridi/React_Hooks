@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const UseRef = () => {
   const [count, setCount] = useState(0);
 
+  // iski value update isliye nahe hoge qq kkk component rerender hota hai to value pher sy 0 sy start hojate hai. yane iski value persit nahe hote. isiliye useRef ka use hota hai
+  let value = 0;
+
   function handleIncrement() {
+    value += 1;
+    console.log("value is : ", value);
     setCount(count + 1);
   }
 
