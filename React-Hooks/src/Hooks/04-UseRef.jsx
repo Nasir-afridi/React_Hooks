@@ -4,72 +4,72 @@ const UseRef = () => {
   const [count, setCount] = useState(0);
 
   /*
-  
-===========================
-        useRef – Theory
-===========================
 
-useRef ek React hook hai jo ek mutable object return karta hai.
+    ===========================
+    useRef – Theory
+    ===========================
 
-Syntax:
-const myRef = useRef(initialValue);
+    useRef ek React hook hai jo ek mutable object return karta hai.
 
-🔹 Ye object sirf ek property rakhta hai:
-   myRef.current
+    Syntax:
+    const myRef = useRef(initialValue);
 
-🔹 Jo initial value hum useRef() ko dete hain,
-   wo .current mein store ho jati hai.
+    🔹 Ye object sirf ek property rakhta hai:
+    myRef.current
 
-🔹 Hum .current ki value ko manually change kar sakte hain.
+    🔹 Jo initial value hum useRef() ko dete hain,
+    wo .current mein store ho jati hai.
 
-🔹 Sabse important:
-   .current ki value change karne par component re-render nahi hota.
+    🔹 Hum .current ki value ko manually change kar sakte hain.
 
-🔹 Lekin ye value har re-render ke darmiyan persist rehti hai
-   (reset nahi hoti).
+    🔹 Sabse important:
+    .current ki value change karne par component re-render nahi hota.
 
-----------------------------------------
-📌 useRef vs useState
-----------------------------------------
+    🔹 Lekin ye value har re-render ke darmiyan persist rehti hai
+    (reset nahi hoti).
 
-useState:
-- State store karta hai
-- Update par component re-render hota hai
-- UI update ke liye use hota hai
+    ----------------------------------------
+    📌 useRef vs useState
+    ----------------------------------------
 
-useRef:
-- Mutable value store karta hai
-- Update par re-render nahi hota
-- Internal reference ya non-UI data ke liye use hota hai
+    useState:
+    - State store karta hai
+    - Update par component re-render hota hai
+    - UI update ke liye use hota hai
 
-----------------------------------------
-📌 Main Use Cases
-----------------------------------------
+    useRef:
+    - Mutable value store karta hai
+    - Update par re-render nahi hota
+    - Internal reference ya non-UI data ke liye use hota hai
 
-1️⃣ Direct DOM Access
-   - Input focus karna
-   - Scroll control
-   - Element measure karna
+    ----------------------------------------
+    📌 Main Use Cases
+    ----------------------------------------
 
-2️⃣ Value Persist Karna Without Re-render
-   - Previous value store karna
-   - setInterval ID store karna
-   - Render count track karna
+    1️⃣ Direct DOM Access
+    - Input focus karna
+    - Scroll control
+    - Element measure karna
 
-----------------------------------------
-📌 Important Concept
+    2️⃣ Value Persist Karna Without Re-render
+    - Previous value store karna
+    - setInterval ID store karna
+    - Render count track karna
 
-React har render par component function dobara chalata hai,
-lekin useRef ka object same reference rehta hai.
-Is liye ye values ko safely persist karta hai bina UI ko update kiye.
+    ----------------------------------------
+    📌 Important Concept
 
-----------------------------------------
+    React har render par component function dobara chalata hai,
+    lekin useRef ka object same reference rehta hai.
+    Is liye ye values ko safely persist karta hai bina UI ko update kiye.
 
-Conclusion:
-useRef un values ke liye best hai jo yaad rakhni ho
-lekin jin ki wajah se UI update nahi karni.
+    ----------------------------------------
 
-*/
+    Conclusion:
+    useRef un values ke liye best hai jo yaad rakhni ho
+    lekin jin ki wajah se UI update nahi karni.
+
+    */
   let value = useRef(0);
 
   function handleIncrement() {
